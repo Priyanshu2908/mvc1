@@ -1,0 +1,49 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Process</title>
+    <style>
+        h2{
+            background-color:green;
+            color:white;
+            text-align:center;
+        }
+        tr,td{
+            color:blue;
+           
+        }
+    </style>
+</head>
+<body>
+    <h2>Insulin Doses accroding to the range of sugar PP</h2>
+    <hr />
+    <form method="post" action="/MainController1/Process">
+        <table>
+            <tr>
+                <td>Enter Patient Name</td>
+                <td><input type="text" name="t1" required /></td>
+            </tr>
+            <tr>
+                <td>Enter Sugar Range So Insulin Can be Suggested</td>
+                <td><input type="Number" name="t2" required /></td>
+            </tr>
+            <tr>
+                <td><input type="Submit"  /></td>
+            </tr>
+        </table>
+    </form>
+    <hr />
+    <span>
+        @ViewBag.res
+        <br />
+        @ViewBag.rValue
+    </span>
+</body>
+</html>

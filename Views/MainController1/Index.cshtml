@@ -1,0 +1,58 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<style>
+
+    h2 {
+        color: navy;
+        background-color: fuchsia;
+    }
+
+    .t1 {
+        border: 1px solid blue;
+    }
+</style>
+<body>
+
+    <center>
+
+        <form method="post" action="/MainController1/Index">
+            <h2>INR FROM POUND</h2>
+            <hr />
+            <table>
+                <tr>
+                    <td>Enter the Name</td>
+                    <td><input type="text" name="t1" placeholder="Enter the Name" required /></td>
+                </tr>
+
+                <tr>
+                    <td>Enter the Amount in Paunds</td>
+                    <td>  <input type="number" name="t2" placeholder="Enter  Amount in Paunds here" required /></td>
+                </tr>
+
+                <tr>
+                    <td><input type="submit" value="Convert" /></td>
+                </tr>
+
+
+            </table>
+        </form>
+        <hr />
+
+        <span>
+            @ViewBag.res
+        </span>
+
+    </center>
+
+
+</body>
+</html>
